@@ -1,4 +1,4 @@
 # BBBacteria
 
 ## Purpose of the Project
->Roza has a partially completed dashboard that she needs to finish. She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer. Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way, if Improbable Beef identifies a species as a candidate to manufacture synthetic beef, Roza's volunteers will be able to identify whether that species is found in their navel.>
+>The purpose of this project was to take a partially completed dashboard that filterd through a JSON file to extract date pertaining to bacteria found in the subjects belly buttons. The partially completed dashboard included demographic information from the subjects and a pulldown menu to select each subject and display their data. The progject was to add visualizations to the dashboard that will identify the top 10 bacterial species in their belly buttons. As well as a belly button washing frequency gauge and a complete analysis interactive and hoverable bubble chart showing the concentration and types of each bacteria found from a swab analysis.
