@@ -85,6 +85,11 @@ function buildCharts(sample) {
     yticks = yticks.reverse();
     //yticks = yticks.map(String)
     yticks = yticks.toString();
+    yticks = yticks.split(",").map(
+      function(a) {
+        return 'OTU ' + a;
+      }
+    ).join(",");
     console.log(yticks);
 
     // 8. Create the trace for the bar chart. 
@@ -93,7 +98,7 @@ function buildCharts(sample) {
       y: yticks,
       text: otuLabels,
       type: "bar",
-      orientation: "h"
+      //orientation: "h"
     }]
     //data = [barData]
     // 9. Create the layout for the bar chart. 
@@ -134,10 +139,12 @@ function buildCharts(sample) {
     var gaugeData = [{
       domain: { x: [0, 1], y: [0, 1] },
       value: washF,
+      title: {text: 'Belly Button Washing Frequency<br>Scrubs per Week'},
       type: "indicator",
       mode: "gauge+number",
       gauge: {
-        axis: {range: [null,10], color: "midnightblue"},
+        axis: {range: [null,10]},
+        bar: {color: "midnightblue"},
         steps: [
           {range: [0, 2], color: "crimson"},
           {range: [2, 4], color: "darkorange"},
@@ -152,9 +159,7 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 600, 
-      height: 450, 
-      margin: { t: 0, b: 0 }
+      
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
